@@ -1,0 +1,115 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Architecture" id="z0E-jY9Y3O7Sm_HHw1jx">
+    <mxGraphModel dx="1100" dy="840" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Layer Titles -->
+        <mxCell id="layer1" value="🖥️ UI层（用户界面）" style="swimlane;fillColor=#f0f8ff;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="1000" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="layer2" value="🔧 服务层（业务逻辑）" style="swimlane;fillColor=#e6ffe6;" vertex="1" parent="1">
+          <mxGeometry x="0" y="120" width="1000" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="layer3" value="🧠 AI能力层" style="swimlane;fillColor=#fff3e0;" vertex="1" parent="1">
+          <mxGeometry x="0" y="270" width="1000" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="layer4" value="📦 数据层（存储与索引）" style="swimlane;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="0" y="390" width="1000" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="layer5" value="🔗 集成层（对外接口）" style="swimlane;fillColor=#e0f7fa;" vertex="1" parent="1">
+          <mxGeometry x="0" y="520" width="1000" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="layer6" value="⚙️ 支撑层（运维与安全）" style="swimlane;fillColor=#ede7f6;" vertex="1" parent="1">
+          <mxGeometry x="0" y="620" width="1000" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- UI层模块 -->
+        <mxCell value="专家信息展示页" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;" vertex="1" parent="layer1">
+          <mxGeometry x="10" y="30" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="搜索与筛选页面" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;" vertex="1" parent="layer1">
+          <mxGeometry x="190" y="30" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="专家认领/编辑界面" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;" vertex="1" parent="layer1">
+          <mxGeometry x="370" y="30" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="合作请求入口" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;" vertex="1" parent="layer1">
+          <mxGeometry x="550" y="30" width="160" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="用户中心/登录" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;" vertex="1" parent="layer1">
+          <mxGeometry x="730" y="30" width="160" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 服务层模块 -->
+        <mxCell value="专家资料管理服务" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d5f5e3;" vertex="1" parent="layer2">
+          <mxGeometry x="10" y="40" width="180" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="搜索服务" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d5f5e3;" vertex="1" parent="layer2">
+          <mxGeometry x="210" y="40" width="150" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="用户与权限服务" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d5f5e3;" vertex="1" parent="layer2">
+          <mxGeometry x="380" y="40" width="180" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="合作请求服务" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d5f5e3;" vertex="1" parent="layer2">
+          <mxGeometry x="580" y="40" width="180" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="后台管理服务" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d5f5e3;" vertex="1" parent="layer2">
+          <mxGeometry x="780" y="40" width="180" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- AI层模块 -->
+        <mxCell value="关键词语义匹配引擎" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#ffe0b2;" vertex="1" parent="layer3">
+          <mxGeometry x="100" y="30" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="专家推荐系统（LangChain）" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#ffe0b2;" vertex="1" parent="layer3">
+          <mxGeometry x="350" y="30" width="250" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="推荐解释模块" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#ffe0b2;" vertex="1" parent="layer3">
+          <mxGeometry x="650" y="30" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 数据层模块 -->
+        <mxCell value="PostgreSQL专家主表" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#f5f5f5;" vertex="1" parent="layer4">
+          <mxGeometry x="100" y="30" width="180" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="向量数据库（Milvus）" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#f5f5f5;" vertex="1" parent="layer4">
+          <mxGeometry x="320" y="30" width="180" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="用户与权限表" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#f5f5f5;" vertex="1" parent="layer4">
+          <mxGeometry x="540" y="30" width="180" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="日志/审计记录表" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#f5f5f5;" vertex="1" parent="layer4">
+          <mxGeometry x="760" y="30" width="180" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 集成层模块 -->
+        <mxCell value="REST API接口服务" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#b2ebf2;" vertex="1" parent="layer5">
+          <mxGeometry x="120" y="30" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="OAuth/SSO认证接口" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#b2ebf2;" vertex="1" parent="layer5">
+          <mxGeometry x="360" y="30" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="高校/科研系统数据对接" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#b2ebf2;" vertex="1" parent="layer5">
+          <mxGeometry x="600" y="30" width="260" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 支撑层模块 -->
+        <mxCell value="CI/CD & 自动部署" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d1c4e9;" vertex="1" parent="layer6">
+          <mxGeometry x="100" y="30" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="访问日志监控系统" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d1c4e9;" vertex="1" parent="layer6">
+          <mxGeometry x="330" y="30" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="RBAC权限控制机制" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d1c4e9;" vertex="1" parent="layer6">
+          <mxGeometry x="560" y="30" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell value="HTTPS加密传输 + 防火墙" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d1c4e9;" vertex="1" parent="layer6">
+          <mxGeometry x="790" y="30" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
