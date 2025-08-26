@@ -33,6 +33,7 @@ const Navigation = () => {
     { text: t('nav.about'), href: '/about' },
     { text: t('nav.platforms'), href: '/platforms' },
     { text: t('nav.activities'), href: '/activities' },
+    { text: t('nav.milestones'), href: '/milestones' },
     { text: t('nav.contact'), href: '/contact' },
   ];
 

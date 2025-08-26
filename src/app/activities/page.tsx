@@ -9,6 +9,7 @@ import {
   ImageListItemBar,
   Chip,
   Divider,
+  Link,
 } from '@mui/material';
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
@@ -16,12 +17,22 @@ import Footer from '@/components/Footer';
 
 const activities = [
   {
+    city: '墨尔本',
+    visits: [],
+    images: ['/20250814.jpg'],
+    description:
+      '2025年8月14日，墨尔本会展中心迎来了一场聚焦中澳合作的盛会——2025澳中博览会盛大开幕。这场汇聚了中澳两国100多家企业和机构的展会中，IEA国际企业家联合会（International Entrepreneurs Alliance）携六家成员企业惊艳登场，成为全场瞩目的焦点。',
+    link: '/activities/20250814'
+  },
+  {
     city: '北京',
     visits: [
       '访问中关村细胞基因治疗产业园',
       '访问A股上市公司振东药业'
     ],
-    images: ['/activity1.jpg', '/activity2.jpg']
+    images: ['/activity1.jpg', '/activity2.jpg'],
+    description: '',
+    link: ''
   },
   {
     city: '河南',
@@ -31,7 +42,9 @@ const activities = [
       '访问晶森生物科技公司',
       '汤阴县张县长接见IEA代表团'
     ],
-    images: ['/activity3.jpg', '/activity4.jpg', '/activity5.jpg', '/activity6.jpg']
+    images: ['/activity3.jpg', '/activity4.jpg', '/activity5.jpg', '/activity6.jpg'],
+    description: '',
+    link: ''
   },
   {
     city: '徐州',
@@ -43,29 +56,37 @@ const activities = [
       '访问徐州东山养老院',
       '访问徐州和信康养'
     ],
-    images: ['/activity7.jpg', '/activity8.jpg', '/activity9.jpg', '/activity10.jpg', '/activity11.jpg', '/activity12.jpg']
+    images: ['/activity7.jpg', '/activity8.jpg', '/activity9.jpg', '/activity10.jpg', '/activity11.jpg', '/activity12.jpg'],
+    description: '',
+    link: ''
   },
   {
     city: '南京',
     visits: [
       '访问理事单位江苏悦心养老集团'
     ],
-    images: ['/activity13.jpg']
+    images: ['/activity13.jpg'],
+    description: '',
+    link: ''
   },
   {
     city: '苏州',
     visits: [
       '访问苏州养老产业联合会'
     ],
-    images: ['/activity14.jpg']
+    images: ['/activity14.jpg'],
+    description: '',
+    link: ''
   },
   {
     city: '上海',
     visits: [
       '上海侨联主席齐全胜接见IEA代表团'
     ],
-    images: ['/activity15.jpg']
-  }
+    images: ['/activity15.jpg'],
+    description: '',
+    link: ''
+  },
 ];
 
 export default function Activities() {
@@ -111,6 +132,7 @@ export default function Activities() {
                 </Typography>
               </Box>
               
+              {!!activity.visits?.length && (
               <Box sx={{ mb: 4 }}>
                 <Typography variant="h6" gutterBottom>
                   访问内容：
@@ -128,40 +150,54 @@ export default function Activities() {
                   ))}
                 </Box>
               </Box>
+              )}
+              {activity.description && (
+                <Box sx={{ mb: 3 }}>
+                  <Typography variant="h6" gutterBottom>
+                    活动简介：
+                  </Typography>
+                  <Typography variant="body1" sx={{ fontSize: '1.05rem', lineHeight: 1.9 }}>
+                    {activity.description}
+                  </Typography>
+                </Box>
+              )}
+
+              {activity.link && (
+                <Box sx={{ mb: 3 }}>
+                  <Link href={activity.link} underline="hover">
+                    查看详情
+                  </Link>
+                </Box>
+              )}
 
               {/* 照片展示 */}
-              <Box>
-                <Typography variant="h6" gutterBottom>
-                  活动照片：
-                </Typography>
-                <ImageList cols={3} gap={16}>
-                  {activity.images.map((image, imageIndex) => (
-                    <ImageListItem key={imageIndex}>
-                      <Image
-                        src={image}
-                        alt={`${activity.city}访问活动 ${imageIndex + 1}`}
-                        width={300}
-                        height={200}
-                        style={{ 
-                          borderRadius: '8px',
-                          objectFit: 'cover',
-                          width: '100%',
-                          height: '200px'
-                        }}
-                      />
-                      <ImageListItemBar
-                        title={`${activity.city}访问活动`}
-                        subtitle={`照片 ${imageIndex + 1}`}
-                        sx={{
-                          background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-                          borderBottomLeftRadius: '8px',
-                          borderBottomRightRadius: '8px'
-                        }}
-                      />
-                    </ImageListItem>
-                  ))}
-                </ImageList>
-              </Box>
+              {!!activity.images?.length && (
+                <Box>
+                  <Typography variant="h6" gutterBottom>
+                    活动照片：
+                  </Typography>
+                  <ImageList cols={3} gap={16}>
+                    {activity.images.map((image) => (
+                      <ImageListItem key={image}>
+                        <Link href={activity.link}>
+                        <Image
+                          src={image}
+                          alt={`${activity.city}访问活动`}
+                          width={300}
+                          height={200}
+                          style={{ 
+                            borderRadius: '8px',
+                            objectFit: 'cover',
+                            width: '100%',
+                            height: '200px'
+                          }}
+                        />
+                        </Link>
+                      </ImageListItem>
+                    ))}
+                  </ImageList>
+                </Box>
+              )}
             </Paper>
             
             {index < activities.length - 1 && (
