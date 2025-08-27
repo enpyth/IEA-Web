@@ -1,20 +1,16 @@
+'use client';
+
 import React from 'react';
 import { Box, Container, Typography, Paper, Link, Divider } from '@mui/material';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
-
-const milestones = [
-    {
-        date: '2025-08-15',
-        title: 'IEA国际企业家联合会获澳中博览会杰出奖项双项殊荣',
-        description: '墨尔本，2025年8月15日 澳中博览会迎来第二日的重磅活动——“中澳自贸协定十周年杰出奖项颁奖仪式”在墨尔本会展中心盛大举行。本次颁奖仪式聚焦中澳自由贸易协定（ChAFTA）生效十年来的卓越贡献者，旨在表彰那些在经贸合作、双向投资、文化技术交流等领域取得突出成就的企业与机构。',
-        cover: '/milestone20250815_1.jpg',
-        link: '/milestones/20250815',
-    },
-];
+import { useLanguage } from '@/contexts/LanguageContext';
+import { getMilestonesByLanguage } from '@/data/milestones';
 
 export default function Milestones() {
+  const { language } = useLanguage();
+  const milestones = getMilestonesByLanguage(language);
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Navigation />
@@ -60,11 +56,6 @@ export default function Milestones() {
                       {m.description}
                     </Typography>
                   )}
-                  <Box sx={{ mt: 2 }}>
-                    <Link href={m.link} underline="hover">
-                      查看详情 →
-                    </Link>
-                  </Box>
                 </Box>
               </Box>
               {idx < milestones.length - 1 && <Divider sx={{ mt: 4 }} />}

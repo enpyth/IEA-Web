@@ -6,6 +6,7 @@ import CompanyIntro from '@/components/home/CompanyIntro';
 import ChairmanMessage from '@/components/home/ChairmanMessage';
 import PlatformsGrid from '@/components/home/PlatformsGrid';
 import LatestNews from '@/components/home/LatestNews';
+import MilestonesIntro from '@/components/home/MilestonesIntro';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <CompanyIntro />
       <ChairmanMessage />
       <PlatformsGrid />
+      <MilestonesIntro />
       <LatestNews />
       <Footer />
     </div>

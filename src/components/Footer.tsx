@@ -11,6 +11,7 @@ import {
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
+import PersonAdd from '@mui/icons-material/PersonAdd';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
@@ -61,7 +62,19 @@ const Footer = () => {
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <PhoneIcon sx={{ mr: 1, color: 'primary.main' }} />
               <Typography variant="body2" color="text.secondary">
-                {t('footer.phone')}
+                {t('footer.phone.au')}
+              </Typography>
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <PhoneIcon sx={{ mr: 1, color: 'primary.main' }} />
+              <Typography variant="body2" color="text.secondary">
+                {t('footer.phone.cn')}
+              </Typography>
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <PersonAdd sx={{ mr: 1, color: 'primary.main' }} />
+              <Typography variant="body2" color="text.secondary">
+                {t('footer.wechat')}
               </Typography>
             </Box>
           </Box>
