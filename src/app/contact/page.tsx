@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import {
   Box,
@@ -10,6 +12,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  Link,
 } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
@@ -17,8 +20,11 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import BusinessIcon from '@mui/icons-material/Business';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { useLanguage } from '@/contexts/LanguageContext';
+import PersonAdd from '@mui/icons-material/PersonAdd';
 
 export default function Contact() {
+  const { t } = useLanguage();
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Navigation />
@@ -40,13 +46,6 @@ export default function Contact() {
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, gap: 6 }}>
           {/* 联系信息 */}
           <Box sx={{ flex: { xs: 'none', lg: '0 0 400px' } }}>
-            <Typography variant="h3" component="h2" gutterBottom>
-              联系信息
-            </Typography>
-            <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, mb: 4 }}>
-              无论您是想了解我们的平台服务，还是希望建立合作关系，
-              我们都欢迎您通过以下方式与我们联系。
-            </Typography>
 
             <Paper sx={{ p: 4 }}>
               <List>
@@ -68,7 +67,7 @@ export default function Contact() {
                   </ListItemIcon>
                   <ListItemText
                     primary="总部地址"
-                    secondary="阿德莱德，澳大利亚"
+                    secondary={t('footer.headquarters')}
                     primaryTypographyProps={{ variant: 'subtitle1', fontWeight: 'bold' }}
                     secondaryTypographyProps={{ variant: 'body2' }}
                   />
@@ -80,9 +79,13 @@ export default function Contact() {
                   </ListItemIcon>
                   <ListItemText
                     primary="邮箱地址"
-                    secondary="info@iea.org.au"
                     primaryTypographyProps={{ variant: 'subtitle1', fontWeight: 'bold' }}
                     secondaryTypographyProps={{ variant: 'body2' }}
+                    secondary={
+                      <Link href={`mailto:${t('footer.email')}`} color="inherit">
+                        {t('footer.email')}
+                      </Link>
+                    }
                   />
                 </ListItem>
                 
@@ -92,11 +95,35 @@ export default function Contact() {
                   </ListItemIcon>
                   <ListItemText
                     primary="联系电话"
-                    secondary="+61 8 XXXX XXXX"
+                    secondary={t('footer.phone.au')}
                     primaryTypographyProps={{ variant: 'subtitle1', fontWeight: 'bold' }}
                     secondaryTypographyProps={{ variant: 'body2' }}
                   />
                 </ListItem>
+                <ListItem sx={{ px: 0 }}>
+                  <ListItemIcon>
+                    <PhoneIcon color="primary" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="联系电话"
+                    secondary={t('footer.phone.cn')}
+                    primaryTypographyProps={{ variant: 'subtitle1', fontWeight: 'bold' }}
+                    secondaryTypographyProps={{ variant: 'body2' }}
+                  />
+                </ListItem>
+
+                <ListItem sx={{ px: 0 }}>
+                  <ListItemIcon>
+                    <PersonAdd color="primary" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="微信ID"
+                    secondary={t('footer.wechat')}
+                    primaryTypographyProps={{ variant: 'subtitle1', fontWeight: 'bold' }}
+                    secondaryTypographyProps={{ variant: 'body2' }}
+                  />
+                </ListItem>
+
               </List>
             </Paper>
 
@@ -119,12 +146,6 @@ export default function Contact() {
 
           {/* 联系表单 */}
           <Box sx={{ flex: 1 }}>
-            <Typography variant="h3" component="h2" gutterBottom>
-              发送消息
-            </Typography>
-            <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, mb: 4 }}>
-              请填写以下表单，我们将尽快与您联系。
-            </Typography>
 
             <Paper sx={{ p: 4 }}>
               <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
@@ -187,6 +208,7 @@ export default function Contact() {
                   variant="contained"
                   size="large"
                   sx={{ alignSelf: 'flex-start', px: 4, py: 1.5 }}
+                  disabled={true}
                 >
                   发送消息
                 </Button>
@@ -270,7 +292,7 @@ export default function Contact() {
             </Typography>
             <Typography variant="body2" color="text.secondary" paragraph>
               我们欢迎所有有志于全球化发展的企业家加入。
-              请通过联系表单或直接发送邮件至info@iea.org.au，
+              请通过联系表单或直接发送邮件至{t('footer.email')}，
               我们的团队将为您详细介绍会员权益和申请流程。
             </Typography>
           </Paper>
