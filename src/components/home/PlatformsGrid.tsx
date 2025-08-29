@@ -56,7 +56,7 @@ export default function PlatformsGrid() {
 
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
-      <Typography variant="h3" component="h2" gutterBottom textAlign="center">
+      <Typography variant="h3" component="h2" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
         {t('platforms.title')}
       </Typography>
       <Typography variant="body1" paragraph sx={{ textAlign: 'center', mb: 6, maxWidth: 800, mx: 'auto' }}>

@@ -32,7 +32,7 @@ export default function Contact() {
       {/* 页面标题 */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 6 }}>
         <Container maxWidth="lg">
-          <Typography variant="h2" component="h1" gutterBottom textAlign="center">
+          <Typography variant="h3" component="h1" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
             联系我们
           </Typography>
           <Typography variant="h6" textAlign="center" color="text.secondary">
@@ -221,7 +221,7 @@ export default function Contact() {
       {/* 服务时间 */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }}>
         <Container maxWidth="lg">
-          <Typography variant="h3" component="h2" gutterBottom textAlign="center">
+          <Typography variant="h4" component="h2" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
             服务时间
           </Typography>
           <Typography variant="body1" paragraph sx={{ textAlign: 'center', mb: 6, fontSize: '1.1rem' }}>
@@ -274,7 +274,7 @@ export default function Contact() {
 
       {/* 常见问题 */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography variant="h3" component="h2" gutterBottom textAlign="center">
+        <Typography variant="h4" component="h2" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
           常见问题
         </Typography>
         <Typography variant="body1" paragraph sx={{ textAlign: 'center', mb: 6, fontSize: '1.1rem' }}>

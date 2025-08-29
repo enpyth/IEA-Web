@@ -116,7 +116,7 @@ export default function Platforms() {
       {/* 页面标题 */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 6 }}>
         <Container maxWidth="lg">
-          <Typography variant="h2" component="h1" gutterBottom textAlign="center">
+          <Typography variant="h3" component="h1" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
             合作平台
           </Typography>
           <Typography variant="h6" textAlign="center" color="text.secondary">
@@ -152,7 +152,7 @@ export default function Platforms() {
               </Box>
               
               <Box sx={{ flex: 1 }}>
-                <Typography variant="h3" component="h2" gutterBottom>
+                <Typography variant="h4" component="h2" gutterBottom>
                   {platform.title}
                 </Typography>
                 <Typography variant="h6" color="primary" gutterBottom>
@@ -203,7 +203,7 @@ export default function Platforms() {
       {/* 平台优势 */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }}>
         <Container maxWidth="lg">
-          <Typography variant="h3" component="h2" gutterBottom textAlign="center">
+          <Typography variant="h4" component="h2" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
             平台优势
           </Typography>
           <Typography variant="body1" paragraph sx={{ textAlign: 'center', mb: 6, fontSize: '1.1rem' }}>
@@ -215,9 +215,8 @@ export default function Platforms() {
               <Typography variant="h5" component="h3" gutterBottom color="primary">
                 资源整合
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                整合全球优质资源，包括技术、资本、市场、人才等，
-                为会员企业提供一站式解决方案。
+              <Typography variant="body2" color="text.secondary" textAlign="left">
+                整合全球优质资源，包括技术、资本、市场、人才等，为会员企业提供一站式解决方案。
               </Typography>
             </Paper>
             
@@ -225,9 +224,8 @@ export default function Platforms() {
               <Typography variant="h5" component="h3" gutterBottom color="primary">
                 专业服务
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                每个平台都配备专业团队，提供从咨询到实施的全流程服务，
-                确保项目成功落地。
+              <Typography variant="body2" color="text.secondary" textAlign="left">
+                每个平台都配备专业团队，提供从咨询到实施的全流程服务，确保项目成功落地。
               </Typography>
             </Paper>
             
@@ -235,9 +233,8 @@ export default function Platforms() {
               <Typography variant="h5" component="h3" gutterBottom color="primary">
                 全球网络
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                覆盖澳洲、美国、加拿大等主要市场，
-                建立广泛的商业网络和合作伙伴关系。
+              <Typography variant="body2" color="text.secondary" textAlign="left">
+                覆盖澳洲、美国、加拿大等主要市场，建立广泛的商业网络和合作伙伴关系。
               </Typography>
             </Paper>
           </Box>
@@ -246,7 +243,7 @@ export default function Platforms() {
 
       {/* 合作案例 */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography variant="h3" component="h2" gutterBottom textAlign="center">
+        <Typography variant="h4" component="h2" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
           成功案例
         </Typography>
         <Typography variant="body1" paragraph sx={{ textAlign: 'center', mb: 6, fontSize: '1.1rem' }}>
@@ -258,7 +255,7 @@ export default function Platforms() {
             <Typography variant="h6" gutterBottom color="primary">
               知识产权交易
             </Typography>
-            <Typography variant="body2" color="text.secondary" paragraph>
+            <Typography variant="body2" color="text.secondary" paragraph textAlign="left">
               通过IPEX平台，成功促成了多起跨国知识产权交易，
               帮助中国企业获得澳洲先进技术，同时为澳洲企业开拓中国市场。
             </Typography>
@@ -268,7 +265,7 @@ export default function Platforms() {
             <Typography variant="h6" gutterBottom color="primary">
               养老产业合作
             </Typography>
-            <Typography variant="body2" color="text.secondary" paragraph>
+            <Typography variant="body2" color="text.secondary" paragraph textAlign="left">
               成功引入澳洲养老护理证书课程到中国，
               建立了多个中澳养老产业合作项目，
               推动了两国银发经济的发展。
@@ -279,7 +276,7 @@ export default function Platforms() {
             <Typography variant="h6" gutterBottom color="primary">
               企业出海服务
             </Typography>
-            <Typography variant="body2" color="text.secondary" paragraph>
+            <Typography variant="body2" color="text.secondary" paragraph textAlign="left">
               帮助500家中国企业以最小成本成功出海澳洲，
               提供从注册到运营的全方位服务支持。
             </Typography>
@@ -290,7 +287,7 @@ export default function Platforms() {
       {/* 联系我们 */}
       <Box sx={{ backgroundColor: 'primary.main', color: 'white', py: 8 }}>
         <Container maxWidth="lg" sx={{ textAlign: 'center' }}>
-          <Typography variant="h4" component="h2" gutterBottom>
+          <Typography variant="h4" component="h2" gutterBottom sx={{ fontWeight: 'bold' }}>
             想要了解更多？
           </Typography>
           <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', mb: 4 }}>

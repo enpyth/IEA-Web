@@ -97,8 +97,8 @@ export default function Activities() {
       {/* 页面标题 */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 6 }}>
         <Container maxWidth="lg">
-          <Typography variant="h2" component="h1" gutterBottom textAlign="center">
-            活动动态
+          <Typography variant="h3" component="h1" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
+            最近动态
           </Typography>
           <Typography variant="h6" textAlign="center" color="text.secondary">
             了解IEA的最新活动和访问动态
@@ -108,7 +108,7 @@ export default function Activities() {
 
       {/* 活动概览 */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography variant="h3" component="h2" gutterBottom>
+        <Typography variant="h4" component="h2" gutterBottom sx={{ fontWeight: 'bold' }}>
           近期访问活动
         </Typography>
         <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, mb: 6 }}>
@@ -210,7 +210,7 @@ export default function Activities() {
       {/* 活动统计 */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }}>
         <Container maxWidth="lg">
-          <Typography variant="h3" component="h2" gutterBottom textAlign="center">
+          <Typography variant="h4" component="h2" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
             活动统计
           </Typography>
           <Typography variant="body1" paragraph sx={{ textAlign: 'center', mb: 6, fontSize: '1.1rem' }}>
@@ -219,7 +219,7 @@ export default function Activities() {
           
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4 }}>
             <Paper sx={{ p: 4, flex: 1, textAlign: 'center' }}>
-              <Typography variant="h4" component="div" gutterBottom color="primary">
+              <Typography variant="h6" component="div" gutterBottom color="primary" sx={{ fontWeight: 'bold' }}>
                 6个城市
               </Typography>
               <Typography variant="body1" color="text.secondary">
@@ -228,20 +228,11 @@ export default function Activities() {
             </Paper>
             
             <Paper sx={{ p: 4, flex: 1, textAlign: 'center' }}>
-              <Typography variant="h4" component="div" gutterBottom color="primary">
+              <Typography variant="h6" component="div" gutterBottom color="primary" sx={{ fontWeight: 'bold' }}>
                 15+ 家企业
               </Typography>
               <Typography variant="body1" color="text.secondary">
                 包括上市公司、科技企业、养老机构等
-              </Typography>
-            </Paper>
-            
-            <Paper sx={{ p: 4, flex: 1, textAlign: 'center' }}>
-              <Typography variant="h4" component="div" gutterBottom color="primary">
-                15张照片
-              </Typography>
-              <Typography variant="body1" color="text.secondary">
-                记录了我们访问活动的精彩瞬间
               </Typography>
             </Paper>
           </Box>
@@ -250,7 +241,7 @@ export default function Activities() {
 
       {/* 合作成果 */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography variant="h3" component="h2" gutterBottom textAlign="center">
+        <Typography variant="h4" component="h2" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
           合作成果
         </Typography>
         <Typography variant="body1" paragraph sx={{ textAlign: 'center', mb: 6, fontSize: '1.1rem' }}>

@@ -17,7 +17,7 @@ export default function LatestNews() {
   return (
     <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }}>
       <Container maxWidth="lg">
-        <Typography variant="h3" component="h2" gutterBottom textAlign="center">
+        <Typography variant="h3" component="h2" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
           {t('news.title')}
         </Typography>
         <Typography variant="body1" paragraph sx={{ textAlign: 'center', mb: 6 }}>

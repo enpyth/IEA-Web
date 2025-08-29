@@ -18,7 +18,7 @@ const translations = {
     'nav.home': '首页',
     'nav.about': '关于我们',
     'nav.platforms': '合作平台',
-    'nav.activities': '活动动态',
+    'nav.activities': '最近动态',
     'nav.milestones': '里程碑',
     'nav.contact': '联系我们',
     'company.title': '关于IEA',

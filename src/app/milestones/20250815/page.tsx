@@ -11,7 +11,7 @@ export default function Milestone20250815() {
 
       <Box sx={{ backgroundColor: '#f8f9fa', py: 6 }}>
         <Container maxWidth="lg">
-          <Typography variant="h3" component="h1" gutterBottom textAlign="center">
+          <Typography variant="h4" component="h1" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
             IEA国际企业家联合会获澳中博览会杰出奖项双项殊荣
           </Typography>
           <Typography variant="body1" textAlign="center" color="text.secondary">

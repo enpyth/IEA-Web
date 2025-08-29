@@ -15,7 +15,7 @@ export default function MilestonesIntro() {
   return (
     <Box sx={{ py: 8 }}>
       <Container maxWidth="lg">
-        <Typography variant="h3" component="h2" gutterBottom textAlign="center">
+        <Typography variant="h3" component="h2" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
           {t('home.milestones.title')}
         </Typography>
         <Typography variant="body1" paragraph sx={{ textAlign: 'center', mb: 6 }}>

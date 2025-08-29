@@ -19,7 +19,7 @@ export default function About() {
       {/* 页面标题 */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 6 }}>
         <Container maxWidth="lg">
-          <Typography variant="h2" component="h1" gutterBottom textAlign="center">
+          <Typography variant="h3" component="h1" gutterBottom textAlign="center" sx={{ fontWeight: 'bold' }}>
             关于我们
           </Typography>
           <Typography variant="h6" textAlign="center" color="text.secondary">
@@ -30,7 +30,7 @@ export default function About() {
 
       {/* 组织介绍 */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography variant="h3" component="h2" gutterBottom>
+        <Typography variant="h4" component="h2" gutterBottom>
           组织介绍
         </Typography>
         <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
@@ -57,7 +57,7 @@ export default function About() {
               />
             </Box>
             <Box sx={{ flex: 1 }}>
-              <Typography variant="h3" component="h2" gutterBottom>
+              <Typography variant="h4" component="h2" gutterBottom>
                 主席致辞
               </Typography>
               <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
@@ -82,7 +82,7 @@ export default function About() {
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 6 }}>
           <Paper sx={{ p: 4, flex: 1 }}>
-            <Typography variant="h4" component="h2" gutterBottom color="primary">
+            <Typography variant="h5" component="h2" gutterBottom color="primary">
               使命
             </Typography>
             <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
@@ -96,7 +96,7 @@ export default function About() {
           </Paper>
           
           <Paper sx={{ p: 4, flex: 1 }}>
-            <Typography variant="h4" component="h2" gutterBottom color="primary">
+            <Typography variant="h5" component="h2" gutterBottom color="primary">
               愿景
             </Typography>
             <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
@@ -114,7 +114,7 @@ export default function About() {
       {/* 全球布局 */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 8 }}>
         <Container maxWidth="lg">
-          <Typography variant="h3" component="h2" gutterBottom textAlign="center">
+          <Typography variant="h4" component="h2" gutterBottom textAlign="center">
             全球布局
           </Typography>
           <Typography variant="body1" paragraph sx={{ textAlign: 'center', mb: 6, fontSize: '1.1rem' }}>
@@ -126,10 +126,8 @@ export default function About() {
               <Typography variant="h5" component="h3" gutterBottom color="primary">
                 总部 - 阿德莱德
               </Typography>
-              <Typography variant="body1" paragraph>
-                澳大利亚南澳州首府，IEA全球总部所在地。
-                这里汇聚了澳洲顶尖的科研机构和创新企业，
-                为IEA的发展提供了强大的科技和人才支撑。
+              <Typography variant="body1" textAlign="left">
+                澳大利亚南澳州首府，IEA全球总部所在地。这里汇聚了澳洲顶尖的科研机构和创新企业，为IEA的发展提供了强大的科技和人才支撑。
               </Typography>
             </Paper>
             
@@ -137,9 +135,8 @@ export default function About() {
               <Typography variant="h5" component="h3" gutterBottom color="primary">
                 澳洲分会
               </Typography>
-              <Typography variant="body1" paragraph>
-                在悉尼、墨尔本、布里斯班、珀斯等主要城市设立分会，
-                覆盖澳洲全境，为当地企业提供全方位的服务支持。
+              <Typography variant="body1" textAlign="left">
+                在悉尼、墨尔本、布里斯班、珀斯等主要城市设立分会，覆盖澳洲全境，为当地企业提供全方位的服务支持。
               </Typography>
             </Paper>
             
@@ -147,9 +144,8 @@ export default function About() {
               <Typography variant="h5" component="h3" gutterBottom color="primary">
                 北美分会
               </Typography>
-              <Typography variant="body1" paragraph>
-                在美国和加拿大的主要城市设立分会，
-                连接北美市场，为会员企业提供国际化发展机会。
+              <Typography variant="body1" textAlign="left">
+                在美国和加拿大的主要城市设立分会，连接北美市场，为会员企业提供国际化发展机会。
               </Typography>
             </Paper>
           </Box>
@@ -158,7 +154,7 @@ export default function About() {
 
       {/* 核心价值观 */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography variant="h3" component="h2" gutterBottom textAlign="center">
+        <Typography variant="h4" component="h2" gutterBottom textAlign="center">
           核心价值观
         </Typography>
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mt: 4 }}>
@@ -166,36 +162,32 @@ export default function About() {
             <Typography variant="h6" gutterBottom color="primary">
               开放包容
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              欢迎来自不同背景、不同文化的企业家加入，
-              创造一个多元化的商业生态系统。
+            <Typography variant="body2" color="text.secondary" textAlign="left">
+              欢迎来自不同背景、不同文化的企业家加入，创造一个多元化的商业生态系统。
             </Typography>
           </Box>
           <Box sx={{ flex: 1, textAlign: 'center', p: 3 }}>
             <Typography variant="h6" gutterBottom color="primary">
               合作共赢
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              倡导互利共赢的合作模式，
-              让每一位参与者都能从中受益。
+            <Typography variant="body2" color="text.secondary" textAlign="left">
+              倡导互利共赢的合作模式，让每一位参与者都能从中受益。
             </Typography>
           </Box>
           <Box sx={{ flex: 1, textAlign: 'center', p: 3 }}>
             <Typography variant="h6" gutterBottom color="primary">
               全球智慧
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              汇聚全球智慧和创新思维，
-              为会员企业提供前沿的商业洞察。
+            <Typography variant="body2" color="text.secondary" textAlign="left">
+              汇聚全球智慧和创新思维，为会员企业提供前沿的商业洞察。
             </Typography>
           </Box>
           <Box sx={{ flex: 1, textAlign: 'center', p: 3 }}>
             <Typography variant="h6" gutterBottom color="primary">
               与时俱进
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              紧跟时代发展潮流，
-              不断创新服务模式和平台功能。
+            <Typography variant="body2" color="text.secondary" textAlign="left">
+              紧跟时代发展潮流，不断创新服务模式和平台功能。
             </Typography>
           </Box>
         </Box>
