@@ -22,6 +22,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import PersonAdd from '@mui/icons-material/PersonAdd';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -124,6 +125,63 @@ export default function Contact() {
                   />
                 </ListItem>
 
+              </List>
+            </Paper>
+
+            {/* 联系人 */}
+            <Paper sx={{ p: 4, mt: 4 }}>
+              <Typography variant="h6" gutterBottom>
+                联系人
+              </Typography>
+              <List disablePadding>
+                <ListItem sx={{ px: 0 }}>
+                  <ListItemIcon>
+                    <AccountCircleIcon color="primary" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="Dana Wang（王琳）"
+                    secondary="Secretary-General（秘书长）"
+                    primaryTypographyProps={{ variant: 'subtitle1', fontWeight: 'bold' }}
+                    secondaryTypographyProps={{ variant: 'body2' }}
+                  />
+                </ListItem>
+                <ListItem sx={{ px: 0 }}>
+                  <ListItemIcon>
+                    <PhoneIcon color="primary" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="澳大利亚"
+                    secondary="+61 0451767776"
+                    primaryTypographyProps={{ variant: 'subtitle1', fontWeight: 'bold' }}
+                    secondaryTypographyProps={{ variant: 'body2' }}
+                  />
+                </ListItem>
+                <ListItem sx={{ px: 0 }}>
+                  <ListItemIcon>
+                    <PhoneIcon color="primary" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="中国"
+                    secondary="+86 13702010088"
+                    primaryTypographyProps={{ variant: 'subtitle1', fontWeight: 'bold' }}
+                    secondaryTypographyProps={{ variant: 'body2' }}
+                  />
+                </ListItem>
+                <ListItem sx={{ px: 0 }}>
+                  <ListItemIcon>
+                    <EmailIcon color="primary" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="邮箱地址"
+                    secondary={
+                      <Link href="mailto:danawang@sevenjadedevelopment.com" color="inherit">
+                        danawang@sevenjadedevelopment.com
+                      </Link>
+                    }
+                    primaryTypographyProps={{ variant: 'subtitle1', fontWeight: 'bold' }}
+                    secondaryTypographyProps={{ variant: 'body2' }}
+                  />
+                </ListItem>
               </List>
             </Paper>
 
